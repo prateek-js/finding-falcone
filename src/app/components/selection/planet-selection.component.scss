@@ -1,0 +1,70 @@
+.planet-selection {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        .planet-list {
+            position: relative;
+            display: inline-block;
+            margin: 2rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px #211a1a;
+            cursor: pointer;
+            .selection-cotainer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                img {
+                    width: 5rem;
+                    height: 5rem;
+                    animation: spin 30s infinite linear;
+                    
+                }
+                .planet-name {
+                    font-size: 1rem;
+                    text-align: center;
+                    margin-top: 0.5rem;
+                    font-weight: bold;
+                } 
+            }
+            &.selected {
+                background: rgba(60,179,113, 0.7);
+                color: white;
+                .selection-cotainer {
+                    img {
+                        animation-play-state: paused;
+                    }
+                }
+            }
+            &.selected:hover {
+                background: rgba(60,179,113, 0.7);
+                color: white;
+                .selection-cotainer {
+                    img {
+                        animation-play-state: paused;
+                    }
+                }
+            }
+            &:hover {
+                background: rgba(64, 68, 55, 0.6);
+                color: white;
+                .selection-cotainer {
+                    img {
+                        animation-play-state: paused;
+                    }
+                }
+            } 
+        }
+    }
+    .buttonArea {
+        float: right;
+        margin-bottom: 3rem;
+    }
+    .btn-outline-primary:disabled {
+        pointer-events: none;
+    }
+}
+

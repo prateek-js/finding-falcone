@@ -1,0 +1,27 @@
+<div class="planet-selection">
+    <h2 class='title'> Select planets you want to search in: </h2>
+    <p> You can only choose 4 planets </p>
+    <div class="container">
+      <div *ngFor="let planet of planetList" class="planet-list" (click)="selectThisPlanet(planet)" [ngClass]="{ 'selected' : planet.isSelected }">
+        <div class="selection-cotainer">
+          <img [src]="imagePath(planet.name)" alt="Planet image"/>
+          <p class="planet-name"> {{ planet.name }} </p>
+          <p> <b>Distance</b> - {{ planet.distance }} megamiles </p>
+        </div>
+      </div>
+    </div>
+    <!-- <div class='planetslist'>
+      <div class='planet' ngFor="(planet, index) in planets" v-on:click="changeselection(index, planet)">
+        <div class='selected' v-if=planet.selected> <p>selected</p> </div>
+        <img src="imagePath(planet.name)" />
+        <h3> {{ planet.name }} </h3>
+        <p> <b>Distance</b> - {{ planet.distance }} megamiles </p>
+      </div>
+    </div>
+    <router-link to="/assignvehicles" class='start-button' ngIf='this.$store.getters.selectedPlanets.length == 4'>Now select vehicles to send to these planets</router-link> -->
+    <section class="buttonArea">
+        <button type="button" (click)="assignVehicles()" class="btn btn-outline-primary" [disabled]= 'planetSelectedCount < 4'>
+          Assign Vehicles
+        </button>
+    </section>
+</div>

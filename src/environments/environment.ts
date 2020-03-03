@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  planetUrl : "https://findfalcone.herokuapp.com/planets",
+  vehicleUrl : "https://findfalcone.herokuapp.com/vehicles",
+  tokenUrl : "https://findfalcone.herokuapp.com/token",
+  findUrl : "https://findfalcone.herokuapp.com/find"
 };
 
 /*

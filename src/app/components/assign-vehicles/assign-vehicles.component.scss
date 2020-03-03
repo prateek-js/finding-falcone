@@ -1,0 +1,217 @@
+.vehicle-selection {
+    .container {
+        display: block;
+        margin-top: 3rem;
+    }
+    @media screen and (max-width: 767px) {
+        .container {
+          display: flex;
+          padding-top: 20px;
+        }
+    }
+    .time-taken {
+        font-size: 1.2rem;
+        margin: 1.5rem 0 0;
+        line-height: 2rem;
+    }
+    .vehicle-layout {
+        display: block;
+        box-sizing: border-box;
+        .vehicle-container {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 2rem;
+            text-align: center;
+            background: rgba(62,63,58,0.6);
+            .vehicle-list {
+                cursor: pointer;
+                padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-align: center;
+                .selection-cotainer {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    img {
+                        animation: shake 0.5s;
+                        animation-iteration-count: infinite;
+                        max-height: 90px;
+                        max-width: 90px;
+                    }
+                    .planet-name {
+                        font-size: 1rem;
+                        text-align: center;
+                        margin-top: 0.5rem;
+                        font-weight: bold;
+                    } 
+                }
+                &.notAvailable {
+                    cursor: not-allowed;
+                    pointer-events: none;
+                    opacity: 0.5;
+                    .selection-cotainer {
+                        img {
+                            animation-play-state: paused;
+                        }
+                    }
+                }
+                &.selected {
+                    background: rgba(60,179,113, 0.7) !important;
+                    color: white;
+                    .selection-cotainer {
+                        img {
+                            animation-play-state: paused;
+                        }
+                    }
+                }
+                &.selected:hover {
+                    background: rgba(60,179,113, 0.7) !important;
+                    color: white;
+                    .selection-cotainer {
+                        img {
+                            animation-play-state: paused;
+                        }
+                    }
+                }
+                &:hover {
+                    background: rgba(64, 68, 55, 0.6);
+                    color: white;
+                    .selection-cotainer {
+                        img {
+                            animation-play-state: paused;
+                        }
+                    }
+                }
+                &.assigned {
+                    background: rgba(62, 63, 58, 0.3);
+                    color: white;
+                    pointer-events: visible;
+                    cursor: pointer;
+                    .selection-cotainer {
+                        img {
+                            animation-play-state: paused;
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 767px) {
+            .vehicle-container {
+              flex-direction: column;
+              align-items: center;
+            }
+        }
+    }
+    .planet-layout {
+        display: block;
+        box-sizing: border-box;
+        .planet-container {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            .planet-list {
+                padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-align: center;
+                cursor: pointer;
+                .selection-cotainer {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    img {
+                        width: 5rem;
+                        height: 5rem;
+                        animation: spin 30s infinite linear;
+                        
+                    }
+                    .planet-name {
+                        font-size: 1rem;
+                        text-align: center;
+                        margin-top: 0.5rem;
+                        font-weight: bold;
+                    } 
+                }
+                &.selected {
+                    background: rgba(62, 63, 58, 0.7) !important;
+                    color: white;
+                    .selection-cotainer {
+                        img {
+                            animation-play-state: paused;
+                        }
+                    }
+                }
+                &.assigned {
+                    background: rgba(62, 63, 58, 0.3);
+                    color: white;
+                    .selection-cotainer {
+                        img {
+                            animation-play-state: paused;
+                        }
+                    }
+                }
+                &.selected:hover {
+                    background: rgba(62, 63, 58, 0.7) !important;
+                    color: white;
+                    .selection-cotainer {
+                        img {
+                            animation-play-state: paused;
+                        }
+                    }
+                }
+                &:hover {
+                    background: rgba(64, 68, 55, 0.6);
+                    color: white;
+                    .selection-cotainer {
+                        img {
+                            animation-play-state: paused;
+                        }
+                    }
+                } 
+            }
+        }
+        @media screen and (max-width: 767px) {
+            .planet-container {
+              flex-direction: column;
+              align-items: center;
+            }
+        }
+    }
+    .buttonArea {
+        margin: 2.5rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        // .reselect-button {
+        //     // float: left;
+        // }
+        // .find-button {
+        //     // float: right;
+        // }
+    }
+    .btn-outline-primary:disabled {
+        pointer-events: none;
+    }
+
+    p {
+        margin-bottom: 0.25rem;
+    }
+}
