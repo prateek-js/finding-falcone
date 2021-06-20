@@ -1,0 +1,16 @@
+<main>
+    <div *ngIf="result.status === 'failure'" class="status">
+        <div class="alert alert-danger text-center">
+            Oops.!! The search party has returned empty handed. 
+        </div>
+        <input type="button" value="Try Again" routerLink="/selection">
+    </div>
+
+    <div *ngIf="result.status === 'success'" class="status">
+        <div class="alert alert-success text-center">
+            Success! Congratulations on finding Falcone. <b>King Shan</b> is mighty pleased.
+            <p class="mt-4 mb-2">Planet Found : {{result.planet_name}}</p>
+        </div>
+        <input type="button" value="Start Again" routerLink="/selection">
+    </div>
+</main>
